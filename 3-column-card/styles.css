@@ -1,0 +1,159 @@
+:root {
+    --sedans-main-clr: #E28625;
+    --suvs-main-clr: #006971;
+    --luxury-main-clr: #004140;
+    --primary-clr: #F2F2F2;
+    --secondary-clr: #FFFFFF;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+button, p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    background: var(--primary-clr);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 87.20%;
+    margin: 88px auto 0 auto;
+}
+
+.container-sedans {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.container-luxury {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.content {
+    margin-left: 49px;
+    width: 70%;
+}
+
+img {
+    margin: 48px 0 35px 0;
+}
+
+h1 {
+    color: var(--primary-clr);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+p {
+    color: var(--secondary-clr);
+    opacity: 75%;
+    line-height: 25px;
+    margin: 25px 0;
+}
+
+button {
+    background: var(--primary-clr);
+    border: none;
+    margin-bottom: 48px;
+    padding: 1em 2em 1em 2em;
+    border-radius: 25px;
+}
+
+/* SEDAN CARD */
+
+.container-sedans {
+    background: var(--sedans-main-clr);
+}
+
+.btn-sedans {
+    color: var(--sedans-main-clr);
+}
+
+/* SUVS CARD */
+
+.container-suvs {
+    background: var(--suvs-main-clr);
+}
+
+.btn-suvs {
+    color: var(--suvs-main-clr);
+}
+
+/* LUXURY CARD */
+
+.container-luxury {
+    background: var(--luxury-main-clr);
+}
+
+.btn-luxury {
+    color: var(--luxury-main-clr);
+}
+
+@media (min-width: 750px) {
+
+    main {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin: 171px auto 0 auto;
+        flex-direction: row;
+        width: 63.9%;
+        max-width: 1500px;
+    }
+
+    p {
+        margin-bottom: 83px;
+    }
+
+    .container-sedans {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 8px;
+    }
+
+    .container-luxury {
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+    }
+
+    .content-suvs {
+        width: 68%
+    }
+
+    button:hover {
+        border: 2px solid var(--secondary-clr);
+        color: var(--secondary-clr);
+    }
+
+    .btn-sedans:hover {
+        background: var(--sedans-main-clr);
+    }
+
+    .btn-suvs:hover {
+        background: var(--suvs-main-clr);
+    }
+
+    .btn-luxury:hover {
+        background: var(--luxury-main-clr);
+    }
+}
